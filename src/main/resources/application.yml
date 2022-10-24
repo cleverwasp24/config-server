@@ -1,0 +1,15 @@
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          default-label: main
+          clone-on-start: 'false'
+          timeout: '10'
+          uri: https://github.com/cleverwasp24/repositoryserver.git
+      health:
+        enabled: 'false'
+  application:
+    name: config-server
+server:
+  port: '8090'
